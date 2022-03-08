@@ -556,7 +556,7 @@ export default class MultiSlider extends React.Component {
               trackOneStyle,
               { width: trackOneLength },
             ]}
-            colors={['white', 'chocolate']}
+            colors={['yellow', 'red']}
             start={{ x: 0, y: 0 }}
             end={{ x: 1, y: 0 }}
           />
