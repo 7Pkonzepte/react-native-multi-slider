@@ -549,6 +549,7 @@ export default class MultiSlider extends React.Component {
     const body = (
       <React.Fragment>
         <View style={[styles.fullTrack, { width: sliderLength }]}>
+          props.vertical? (
           <LinearGradient
             style={[
               styles.track,
@@ -560,6 +561,7 @@ export default class MultiSlider extends React.Component {
             start={{ x: 0, y: 0 }}
             end={{ x: 1, y: 0 }}
           />
+          ):(<></>)
           <View
             style={[
               styles.track,
