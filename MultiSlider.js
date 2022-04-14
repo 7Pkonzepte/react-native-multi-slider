@@ -550,7 +550,7 @@ export default class MultiSlider extends React.Component {
     const body = (
       <React.Fragment>
         <View style={[styles.fullTrack, { width: sliderLength }]}>
-          {props.gradientColor ? (
+          {this.props.gradientColor ? (
             <LinearGradient
               style={[
                 styles.track,
