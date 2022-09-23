@@ -56,6 +56,7 @@ export default class MultiSlider extends React.Component {
     minMarkerOverlapStepDistance: 0,
     testID: '',
     gradientColor: false,
+    forRelease:false
   };
 
   constructor(props) {
@@ -550,7 +551,19 @@ export default class MultiSlider extends React.Component {
     const body = (
       <React.Fragment>
         <View style={[styles.fullTrack, { width: sliderLength }]}>
-          {this.props.gradientColor ? (
+          {this.props.gradientColor && this.props.forRelease? (
+            <LinearGradient
+              style={[
+                styles.track,
+                this.props.trackStyle,
+                trackOneStyle,
+                { width: trackOneLength },
+              ]}
+              colors={['yellow', '#fa2829']}
+              start={{ x: 0, y: 0 }}
+              end={{ x: 1, y: 0 }}
+            />
+          ) : (
             <LinearGradient
               style={[
                 styles.track,
@@ -561,15 +574,6 @@ export default class MultiSlider extends React.Component {
               colors={['yellow', 'red']}
               start={{ x: 0, y: 0 }}
               end={{ x: 1, y: 0 }}
-            />
-          ) : (
-            <View
-              style={[
-                styles.track,
-                this.props.trackStyle,
-                trackOneStyle,
-                { width: trackOneLength },
-              ]}
             />
           )}
           <View
