@@ -44,13 +44,13 @@
   "devDependencies": {
     "husky": "^1.1.2",
     "lint-staged": "^7.3.0",
-    "prettier": "^1.14.3"
+    "prettier": "^1.14 .3"
   },
   "bugs": {
     "url": "https://github.com/ptomasroos/react-native-multi-slider/issues"
   },
   "homepage": "https://github.com/ptomasroos/react-native-multi-slider#readme",
   "dependencies": {
-    "expo-linear-gradient": "^11.0.3"
+    "expo-linear-gradient": "^12.0.1"
   }
 }
